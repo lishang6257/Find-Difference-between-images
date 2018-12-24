@@ -103,8 +103,8 @@ for name = Start : End
     res = max(res2,res);
     
     res = imclose(res,strel('square',3));
-    res = imopen(res,strel('square',3));
     res = bwfill(res,'holes');
+    res = imopen(res,strel('square',3));
     res = medfilt2(res);
     
     dis = 4;
